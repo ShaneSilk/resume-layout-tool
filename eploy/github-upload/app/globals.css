@@ -1,0 +1,63 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Source Han Sans SC", system-ui, sans-serif;
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.resume-paper {
+  width: 794px;
+  min-height: 1123px;
+  background: #ffffff;
+}
+
+@media (max-width: 1023px) {
+  .resume-paper {
+    width: 100%;
+    min-height: auto;
+  }
+}
+
+@media print {
+  body {
+    background: #ffffff;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-root {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .print-only-resume {
+    box-shadow: none !important;
+    width: 210mm !important;
+    min-height: 297mm !important;
+    margin: 0 !important;
+    border: none !important;
+  }
+}
